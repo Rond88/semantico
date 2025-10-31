@@ -1,0 +1,18 @@
+:root{
+
+}
+header{
+    /* Imagen de fondo*/
+    background-image: url("../img/headerbackground.png");
+    /*Ocultar h1*/
+    h1{
+        display: none;
+    }
+    img{
+        width: 20px;
+        height: auto;
+    }
+}
+main{
+    
+}
