@@ -1,18 +1,52 @@
-:root{
-
+:root {
 }
-header{
-    /* Imagen de fondo*/
-    background-image: url("../img/headerbackground.png");
-    /*Ocultar h1*/
-    h1{
-        display: none;
+header {
+    position: relative;
+  /* Imagen de fondo*/
+  background-image: url("../img/headerbackground.png");
+  /*Ocultar h1*/
+  h1 {
+    display: none;
+  }
+  img {
+    width: 130px;
+    height: auto;
+    
+  }
+  nav {
+    display: inline-flex;
+    ul {
+      list-style: none;
+      li {
+        display: inline;
+        margin-right: 20px;
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
     }
-    img{
-        width: 20px;
-        height: auto;
+  }
+  section {
+    h2 {
+      display: none;
     }
+    ul {
+      list-style: none;
+      li {
+        display: inline;
+        margin-right: 10px;
+        a {
+          img {
+            width: 30px;
+            height: auto;
+          }
+        }
+      }
+    }
+    display: flex;
+    justify-content: center;
+  }
 }
-main{
-
+main {
 }
