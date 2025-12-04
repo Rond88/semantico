@@ -1,7 +1,7 @@
 :root {
 }
 header {
-    position: relative;
+  position: relative;
   /* Imagen de fondo*/
   background-image: url("../img/headerbackground.png");
   /*Ocultar h1*/
@@ -11,7 +11,6 @@ header {
   img {
     width: 130px;
     height: auto;
-    
   }
   nav {
     display: inline-flex;
@@ -49,4 +48,51 @@ header {
   }
 }
 main {
+  /*About*/
+  section {
+    h2 {
+      display: none;
+    }
+  }
+  /*Services*/
+  section {
+    h2 {
+      display: none;
+    }
+  }
+  /*Recent work*/
+  section {
+    h2 {
+      display: none;
+    }
+    section{
+      h3 {
+        display: none;
+      }
+      ul{
+        list-style: none;
+        display: inline-block;
+        }
+    }
+    ul{
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      /*Imagenes 3x2*/
+      li {
+        margin: 0;
+        padding: 0;
+        article {
+          img {
+            width: 200px;
+            height: auto
+          }
+          h3 {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
 }
