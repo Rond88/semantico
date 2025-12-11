@@ -8,8 +8,25 @@ header {
   h1 {
     display: none;
   }
+  div {
+    color: aqua;
+    padding-top: 100px;
+    font-weight: bold;
+    text-align: center;
+  }
+  p {
+    font-weight: lighter;
+    font-size: xx-large;
+    text-align: center;
+    color: white;
+
+    span {
+      font-weight: bolder;
+    }
+  }
+
   img {
-    width: 130px;
+    width: 50px;
     height: auto;
   }
   nav {
@@ -53,6 +70,16 @@ main {
     h2 {
       display: none;
     }
+    /*Profile*/
+    section {
+      img {
+        width: 100px;
+        height: auto;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+      }
+    }
   }
   /*Services*/
   section {
@@ -65,27 +92,30 @@ main {
     h2 {
       display: none;
     }
-    section{
+    section {
       h3 {
         display: none;
       }
-      ul{
+      ul {
         list-style: none;
         display: inline-block;
-        }
+      }
     }
-    ul{
+    ul {
       list-style: none;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      /*Imagenes 3x2*/
+      grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+      grid-template-rows: repeat(2, auto); /* 2 filas */
+      gap: 2px; /* separación entre imágenes */
+      padding: 0 20px; /* padding izquierda y derecha */
       li {
         margin: 0;
         padding: 0;
         article {
           img {
-            width: 200px;
-            height: auto
+            width: 100%; /* que ocupe toda la celda */
+            height: auto; /* mantener proporción */
+            display: block;
           }
           h3 {
             display: none;
@@ -94,5 +124,4 @@ main {
       }
     }
   }
-
 }
