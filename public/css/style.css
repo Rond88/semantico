@@ -30,6 +30,9 @@ header {
     height: auto;
   }
   nav {
+    h2 {
+      display: none;
+    }
     display: inline-flex;
     ul {
       list-style: none;
@@ -88,33 +91,70 @@ main {
     }
   }
   /*Recent work*/
-  section {
+  .recent-work {
     h2 {
-      display: none;
+      display: block;
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 300;
+      span {
+        font-weight: 700;
+      }
     }
+
+    /* Filters section */
     section {
+      text-align: center;
+      margin-bottom: 3rem;
+
       h3 {
         display: none;
       }
       ul {
         list-style: none;
-        display: inline-block;
+        display: inline-flex;
+        gap: 2rem;
+        padding: 0;
+
+        li {
+          a {
+            text-decoration: none;
+            color: #888;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+
+            &:hover,
+            &.active {
+              color: #40e0d0; /* Active/Hover color */
+            }
+          }
+        }
       }
     }
-    ul {
+
+    /* Grid of images */
+    > ul {
       list-style: none;
       display: grid;
       grid-template-columns: repeat(3, 1fr); /* 3 columnas */
       grid-template-rows: repeat(2, auto); /* 2 filas */
-      gap: 2px; /* separación entre imágenes */
-      padding: 0 20px; /* padding izquierda y derecha */
+      gap: 30px; /* Restore gap */
+      padding: 0; /* Remove padding from grid itself if centering via max-width */
+      width: 100%;
+      max-width: 1200px; /* Limit width to allow centering */
+      margin: 0 auto; /* Center the grid container */
+
       li {
         margin: 0;
         padding: 0;
+
         article {
           img {
-            width: 100%; /* que ocupe toda la celda */
-            height: auto; /* mantener proporción */
+            width: 100%;
+            height: auto;
             display: block;
           }
           h3 {
