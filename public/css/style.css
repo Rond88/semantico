@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap");
 
 :root {
-  font-family: 'Roboto Flex', sans-serif;
+  font-family: "Roboto Flex", sans-serif;
 }
 header {
   position: relative;
@@ -100,6 +100,34 @@ main {
       div:nth-of-type(2) {
         font-weight: lighter;
         padding-top: 0.25%;
+      }
+      section {
+        h4 {
+          display: none;
+        }
+        ul {
+          display: flex;
+          flex-wrap: wrap; /* Permite que los elementos salten de línea */
+          justify-content: center; /* Centra los 3 elementos de la segunda fila */
+          list-style: none;
+          padding: 0;
+          li {
+            flex: 0 0 12.5%; /* Cada li ocupa exactamente 1/8 del ancho */
+            text-align: center;
+            box-sizing: border-box;
+          }
+          li div {
+            font-weight: light;
+            border: 1px solid #ccc;
+          }
+        }
+
+        /* ul > li {
+          list-style: none;
+          display: inline-block;
+
+         
+        } */
       }
     }
   }
