@@ -91,8 +91,6 @@ main {
       }
       div {
         text-align: center;
-      }
-      div:first-of-type {
         font-weight: bold;
         padding-top: 1%;
         font-size: 1.5rem;
@@ -100,6 +98,7 @@ main {
       div:nth-of-type(2) {
         font-weight: lighter;
         padding-top: 0.25%;
+        font-size: 1rem;
       }
       section {
         h4 {
@@ -111,14 +110,22 @@ main {
           justify-content: center; /* Centra los 3 elementos de la segunda fila */
           list-style: none;
           padding: 0;
+          width: 100%;
+          max-width: 1200px;
+          margin: 0 auto;
           li {
-            flex: 0 0 12.5%; /* Cada li ocupa exactamente 1/8 del ancho */
+            flex: 0 0 1; /* Cada li ocupa exactamente 1/8 del ancho */
             text-align: center;
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
           }
+          /*Technologies*/
           li div {
-            font-weight: light;
+            font-size: 10px;
             border: 1px solid #ccc;
+            display: inline-block;
+            padding: 5px;
           }
         }
 
