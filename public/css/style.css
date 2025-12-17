@@ -104,29 +104,36 @@ main {
         h4 {
           display: none;
         }
+        /* Technologies */
         ul {
-          display: flex;
-          flex-wrap: wrap; /* Permite que los elementos salten de línea */
-          justify-content: center; /* Centra los 3 elementos de la segunda fila */
+          display: grid;
+          grid-template-columns: repeat(
+            8,
+            max-content
+          ); /* pills por contenido */
+          gap: 12px;
+
+          justify-content: center; /* centra cada fila */
           list-style: none;
-          padding: 0;
+
           width: 100%;
           max-width: 1200px;
           margin: 0 auto;
-          li {
-            flex: 0 0 1; /* Cada li ocupa exactamente 1/8 del ancho */
-            text-align: center;
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-          }
-          /*Technologies*/
-          li div {
-            font-size: 10px;
-            border: 1px solid #ccc;
-            display: inline-block;
-            padding: 5px;
-          }
+          padding: 0 20px;
+          box-sizing: border-box;
+        }
+
+        ul li {
+          display: flex;
+        }
+
+        ul li div {
+          font-size: 10px;
+          border: 1px solid #dcdcdc;
+          padding: 6px 10px;
+          border-radius: 4px; /* efecto pill */
+          background: #f9f9f9;
+          white-space: nowrap;
         }
 
         /* ul > li {
