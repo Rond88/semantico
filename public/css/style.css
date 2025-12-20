@@ -2,17 +2,31 @@
 
 :root {
   font-family: "Roboto Flex", sans-serif;
+  /*padding*/
   --padding-top-small: 2%;
   --padding-bottom-small: 2%;
   --padding-top-medium: 4.5%;
   --padding-bottom-medium: 4.5%;
 
+  --padding-services: 5%;
+
   /* imágenes*/
   --img-width-logo: 100px;
   --img-width-redes: 30px;
   --img-width-profile: 100px;
-
+  --img-width-services: 60px;
   --img-margin-top-profile: -50px;
+  --img-width-client-testimonials: 60px;
+
+  /*colores*/
+  
+  /*tamaños*/
+  --texto-super-grande: 3rem;
+  --texto-grande: 2.5rem;
+  --texto-pequeyo: 0.8rem;
+
+  /*espaciado*/
+  --espaciado: 1.5;
 }
 header {
   position: relative;
@@ -34,7 +48,7 @@ header {
   }
   p {
     font-weight: lighter;
-    font-size: xx-large;
+    font-size: var(--texto-super-grande);
     text-align: center;
     color: white;
 
@@ -48,6 +62,11 @@ header {
     height: auto;
   }
   nav {
+    /*colocar el nav en la derecha*/
+    position: absolute;
+    top: 0;
+    right: 0;
+
     h2 {
       display: none;
     }
@@ -106,8 +125,10 @@ main {
         border: 5px solid aqua;
 
         /*para que pueda verse encima del final del header*/
-        margin-top: var(--img-margin-top-profile); /* para que pueda subir la mitad de su tamaño*/
-        position: relative; 
+        margin-top: var(
+          --img-margin-top-profile
+        ); /* para que pueda subir la mitad de su tamaño*/
+        position: relative;
         z-index: 10;
       }
       div {
@@ -122,14 +143,14 @@ main {
         font-size: 1rem;
         padding-bottom: var(--padding-bottom-small);
       }
-      p{
+      p {
         text-align: center;
         padding-bottom: var(--padding-bottom-small);
         max-width: 30%;
         margin: 0 auto;
         font-weight: lighter;
-        font-size: 0.8rem;
-        line-height: 1.5;
+        font-size: var(--texto-pequeyo);
+        line-height: var(--espaciado);
       }
       section {
         h4 {
@@ -161,6 +182,9 @@ main {
   }
   /*Skills*/
   .skills {
+    h2 {
+      font-weight: bolder;
+    }
     background-color: lightgray;
     h3 {
       text-align: center;
@@ -194,14 +218,61 @@ main {
     }
   }
   /*Services*/
-  section {
+  .services {
     h2 {
-      display: none;
+      display: block;
+      text-align: center;
+      font-weight: normal;
+    }
+    div {
+      text-align: center;
+      font-size: var(--texto-grande);
+      span {
+        font-weight: bold;
+      }
+    }
+    ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 20px;
+      padding: 0 40px 40px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      /*padding*/
+      padding-top: var(--padding-top-medium);
+      padding-bottom: var(--padding-bottom-medium);
+    }
+    ul li {
+      article {
+        border: 1px solid #dcdcdc;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: var(--padding-services);
+        img {
+          margin: auto;
+          display: block;
+          border-radius: 50%;
+          width: var(--img-width-services);
+        }
+        h3 {
+          text-align: center;
+        }
+        p {
+          text-align: center;
+          font-weight: lighter;
+        }
+      }
     }
   }
   /*Recent work*/
   .recent-work {
+    padding-bottom: var(--padding-bottom-medium);
     h2 {
+      text-align: center;
+      font-weight: normal;
+    }
+    div {
       display: block;
       text-align: center;
       font-size: 2.5rem;
@@ -271,6 +342,48 @@ main {
           }
         }
       }
+    }
+  }
+  /*Client testimonials*/
+  .client-testimonials {
+    padding-top: var(--padding-top-medium);
+    padding-bottom: var(--padding-bottom-medium);
+    background-color: lightgray;
+    h2 {
+      text-align: center;
+      font-weight: normal;
+    }
+    div {
+      padding-bottom: var(--padding-bottom-medium);
+      display: block;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 300;
+      span {
+        font-weight: 700;
+      }
+    }
+    img {
+      width: var(--img-width-client-testimonials);
+      display: block;
+      margin: auto;
+      border-radius: 50%;
+      border: 5px solid aqua;
+    }
+    p {
+      padding-bottom: var(--padding-bottom-small);
+      padding-top: var(--padding-top-small);
+      font-weight: lighter;
+      text-align: center;
+      max-width: 30%;
+      margin: 0 auto;
+      font-size: var(--texto-pequeyo);
+      line-height: var(--espaciado);
+    }
+    cite {
+      display: block;
+      font-weight: bold;
+      text-align: center;
     }
   }
 }
