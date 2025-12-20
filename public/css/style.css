@@ -2,8 +2,15 @@
 
 :root {
   font-family: "Roboto Flex", sans-serif;
-  --padding-top: 4.5%;
-  --padding-bottom: 4.5%;
+  --padding-top-small: 2%;
+  --padding-bottom-small: 2%;
+  --padding-top-medium: 4.5%;
+  --padding-bottom-medium: 4.5%;
+
+  /* imágenes*/
+  --img-width-logo: 100px;
+  --img-width-redes: 30px;
+  --img-width-profile: 100px;
 }
 header {
   position: relative;
@@ -15,7 +22,7 @@ header {
   }
   div {
     color: aqua;
-    padding-top: 100px;
+    padding-top: var(--padding-top-medium);
     font-weight: bold;
     text-align: center;
   }
@@ -31,7 +38,7 @@ header {
   }
 
   img {
-    width: 50px;
+    width: var(--img-width-logo);
     height: auto;
   }
   nav {
@@ -57,25 +64,27 @@ header {
     }
     ul {
       list-style: none;
+      display: flex;
+      justify-content: center;
       li {
-        display: inline;
         margin-right: 10px;
         a {
           img {
-            width: 30px;
+            width: var(--img-width-redes);
             height: auto;
+            background-color: white;
+            border-radius: 50%;
           }
         }
       }
     }
-    display: flex;
-    justify-content: center;
+   
   }
 }
 main {
   /*About*/
   .about {
-    padding-top: var(--padding-top);
+    padding-top: var(--padding-top-medium);
     h2 {
       display: none;
     }
@@ -85,11 +94,11 @@ main {
         display: none;
       }
       img {
-        width: 100px;
+        width: var(--img-width-profile);
         height: auto;
         border-radius: 50%;
         display: block;
-        margin: 0 auto;
+        margin: auto;
         border: 5px solid aqua;
       }
       div {
@@ -102,6 +111,7 @@ main {
         font-weight: lighter;
         padding-top: 0.25%;
         font-size: 1rem;
+        padding-bottom: var(--padding-bottom-small);
       }
       section {
         h4 {
@@ -109,34 +119,24 @@ main {
         }
         /* Technologies */
         ul {
-          display: grid;
-          grid-template-columns: repeat(
-            8,
-            max-content
-          ); /* pills por contenido */
-          gap: 12px;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 10px;
+          max-width: 30%; /* para que quepan 8 arriba y 3 abajo, como en la imagen referencia*/
+          margin: 0 auto; 
 
-          justify-content: center; /* centra cada fila */
+          justify-content: center; /* centra la fila */
           list-style: none;
 
-          width: 100%;
-          max-width: 1200px;
-          margin: 0 auto;
-          box-sizing: border-box;
-          padding-bottom: var(--padding-bottom);
+          padding-bottom: var(--padding-bottom-medium);
         }
-
-        ul li {
-          display: flex;
-        }
-
         ul li div {
           font-size: 10px;
           border: 1px solid #dcdcdc;
           padding: 6px 10px;
-          border-radius: 4px; /* efecto pill */
+          border-radius: 4px; /* redondear los divs */
           background: #f9f9f9;
-          white-space: nowrap;
         }
       }
     }
@@ -158,8 +158,8 @@ main {
       max-width: 1200px;
       margin: 0 auto;
       /*padding*/
-      padding-top: var(--padding-top);
-      padding-bottom: var(--padding-bottom);
+      padding-top: var(--padding-top-medium);
+      padding-bottom: var(--padding-bottom-medium);
 
       li {
         width: 100%;
