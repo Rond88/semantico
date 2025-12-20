@@ -2,6 +2,8 @@
 
 :root {
   font-family: "Roboto Flex", sans-serif;
+  --padding-top: 4.5%;
+  --padding-bottom: 4.5%;
 }
 header {
   position: relative;
@@ -72,7 +74,8 @@ header {
 }
 main {
   /*About*/
-  section {
+  .about {
+    padding-top: var(--padding-top);
     h2 {
       display: none;
     }
@@ -119,8 +122,8 @@ main {
           width: 100%;
           max-width: 1200px;
           margin: 0 auto;
-          padding: 0 20px;
           box-sizing: border-box;
+          padding-bottom: var(--padding-bottom);
         }
 
         ul li {
@@ -135,13 +138,40 @@ main {
           background: #f9f9f9;
           white-space: nowrap;
         }
+      }
+    }
+  }
+  /*Skills*/
+  .skills {
+    background-color: lightgray;
+    h3 {
+      text-align: center;
+      font-size: 2rem;
+    }
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
+      gap: 20px;
+      list-style: none;
+      padding: 0 40px 40px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      /*padding*/
+      padding-top: var(--padding-top);
+      padding-bottom: var(--padding-bottom);
 
-        /* ul > li {
-          list-style: none;
-          display: inline-block;
-
-         
-        } */
+      li {
+        width: 100%;
+        label {
+          display: block;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+        progress {
+          width: 100%;
+          height: 20px;
+        }
       }
     }
   }
@@ -196,17 +226,17 @@ main {
       }
     }
 
-    /* Grid of images */
+    /* Grid de las imágenes */
     > ul {
       list-style: none;
       display: grid;
       grid-template-columns: repeat(3, 1fr); /* 3 columnas */
       grid-template-rows: repeat(2, auto); /* 2 filas */
       gap: 30px; /* Restore gap */
-      padding: 0; /* Remove padding from grid itself if centering via max-width */
+      padding: 0; /* Quitar el padding del grid si se centra mediante el ancho máximo */
       width: 100%;
-      max-width: 1200px; /* Limit width to allow centering */
-      margin: 0 auto; /* Center the grid container */
+      max-width: 1200px; /* Limitar el ancho para permitir el centrado */
+      margin: 0 auto; /* Centrar el contenedor del grid */
 
       li {
         margin: 0;
