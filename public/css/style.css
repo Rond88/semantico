@@ -17,6 +17,7 @@
   --img-width-services: 60px;
   --img-margin-top-profile: -50px;
   --img-width-client-testimonials: 60px;
+  --img-width-profile-blog: 50px;
 
   /*colores*/
 
@@ -424,6 +425,9 @@ main {
 
   /*Blog*/
   .blog {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f9f9f9; /* Fondo gris claro para que resalten las tarjetas */
     h2 {
       text-align: center;
       font-weight: normal;
@@ -437,6 +441,72 @@ main {
       span {
         font-weight: 700;
       }
+    }
+
+    /*prueba*/
+    /* 1. Contenedor de la lista */
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+      gap: 30px;
+      list-style: none;
+      padding: 40px;
+    }
+
+    /* 2. Estilo de la Tarjeta (article) */
+    ul li article {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #dcdcdc;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 3. La imagen */
+    ul li article img {
+      width: 100%;
+      height: 220px; /* Altura fija para que todas sean iguales */
+      object-fit: cover; /* Evita que la imagen se estire */
+    }
+
+    /* 4. Contenido de texto (Título y Párrafo) */
+    ul li article h3 {
+      padding: 20px 20px 10px;
+      margin: 0;
+      font-size: 1.25rem;
+      text-align: center;
+    }
+
+    ul li article p {
+      padding: 0 20px 20px;
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+    hr {
+      margin: 20px 0;
+    }
+    .blog-author {
+      display: flex;
+      align-items: center; /* Vertically center */
+      gap: 10px; /* Space between image and text */
+      padding: 0 20px 20px; /* Alignment with other content */
+    }
+    .blog-author img {
+      width: var(--img-width-profile-blog);
+      height: auto;
+      border-radius: 50%;
+    }
+    .blog-author div {
+      font-size: var(--texto-pequeyo);
+      padding-bottom: 0; /* Override generic padding */
+      text-align: left; /* Name aligned left next to image */
+    }
+    .blog-author img[alt="share"] {
+      margin-left: auto;
+      width: 20px; /* Overriding default profile image size */
+      border-radius: 0;
+      cursor: pointer;
     }
   }
 
