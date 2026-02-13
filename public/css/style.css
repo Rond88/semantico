@@ -68,8 +68,10 @@ header {
   }
 
   img {
+    /*logo*/
     width: var(--img-width-logo);
     height: auto;
+    padding: var(--padding-top-small);
   }
   nav {
     /*colocar el nav en la derecha*/
