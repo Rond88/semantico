@@ -559,6 +559,9 @@ main {
 
     /* Contact Info en la izquierda*/
     .contact-info {
+      h2{
+        display: none;
+      }
       h3 {
         display: none;
       }
