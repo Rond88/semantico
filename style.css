@@ -1,0 +1,27 @@
+body {
+    font-family: sans-serif;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+
+    margin-bottom: 10px;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
