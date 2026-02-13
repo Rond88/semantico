@@ -642,6 +642,28 @@ main {
       }
     }
   }
+  /* multimedia */
+  #multimedia {
+  padding-top: var(--padding-top-medium);
+  padding-bottom: var(--padding-bottom-medium);
+  text-align: center;
+  background-color: var(--color-bg-light);
+}
+
+#multimedia h2 {
+  font-size: var(--texto-grande);
+  margin-bottom: 30px;
+  color: var(--color-text-dark);
+}
+
+#multimedia video,
+#multimedia audio {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 }
 
 /* Footer */
@@ -692,6 +714,7 @@ footer {
     margin-top: 50px;
   }
 }
+
 /* ============================================================================
    RESPONSIVE DESIGN - MEDIA QUERIES
    ============================================================================ */
