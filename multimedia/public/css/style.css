@@ -673,7 +673,41 @@ main {
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+    svg{
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      ellipse,
+      text {
+        transform: translateX(150px);
+      }
+    }
   }
+  /* external multimedia */
+  #external{
+    padding-top: var(--padding-top-medium);
+    padding-bottom: var(--padding-bottom-medium);
+    text-align: center;
+    background-color: var(--color-bg-section);
+  }
+   h2 {
+      text-align: center;
+      font-weight: normal;
+      color: var(--color-primary);
+    }
+    div {
+      padding-bottom: var(--padding-bottom-medium);
+      display: block;
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 300;
+      span {
+        font-weight: 700;
+      }
+    }
+
 }
 
 /* Footer */
