@@ -36,7 +36,7 @@
   --texto-pequeyo: 0.8rem;
 
   /*espaciado*/
-  --espaciado: 1.5;
+  --espaciado: 1.55;
 }
 header {
   position: relative;
@@ -673,7 +673,7 @@ main {
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-    svg{
+    svg {
       display: block;
       margin: 20px auto;
       max-width: 100%;
@@ -686,28 +686,27 @@ main {
     }
   }
   /* external multimedia */
-  #external{
+  #external {
     padding-top: var(--padding-top-medium);
     padding-bottom: var(--padding-bottom-medium);
     text-align: center;
     background-color: var(--color-bg-section);
   }
-   h2 {
-      text-align: center;
-      font-weight: normal;
-      color: var(--color-primary);
+  h2 {
+    text-align: center;
+    font-weight: normal;
+    color: var(--color-primary);
+  }
+  div {
+    padding-bottom: var(--padding-bottom-medium);
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 300;
+    span {
+      font-weight: 700;
     }
-    div {
-      padding-bottom: var(--padding-bottom-medium);
-      display: block;
-      text-align: center;
-      font-size: 3rem;
-      font-weight: 300;
-      span {
-        font-weight: 700;
-      }
-    }
-
+  }
 }
 
 /* Footer */
@@ -966,6 +965,49 @@ footer {
   }
 }
 
+/* Accesibilidad: objetivos táctiles mínimos 44×44px */
+a,
+button,
+.icon-link,
+footer ul li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 6px;
+  box-sizing: content-box;
+}
+
+a > img,
+a > svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.blog-author img[alt="share"] {
+  width: 20px;
+  display: inline-block;
+  padding: 12px;
+  box-sizing: content-box;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  a,
+  button,
+  .icon-link,
+  footer ul li a {
+    padding: 4px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .blog-author img[alt="share"] {
+    padding: 10px;
+  }
+}
+
 /* MOBILE PEQUEÑO: hasta 480px */
 @media screen and (max-width: 480px) {
   header p {
@@ -1012,4 +1054,9 @@ footer {
     padding-left: 0 !important;
     text-align: center !important;
   }
+}
+
+/* Interlineado mínimo para párrafos */
+p {
+  line-height: var(--espaciado);
 }
